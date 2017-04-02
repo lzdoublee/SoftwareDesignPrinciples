@@ -1,0 +1,39 @@
+package Cylinder;
+
+/**
+ * Created by L.z Double E on 4/2/2017.
+ */
+public abstract class CalcCylinder {
+
+    private int radius;
+    private int height;
+    public abstract void printSurfaceArea();
+    public abstract void printVolume();
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int rad) {
+        this.radius = rad;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int h) {
+        this.height = h;
+    }
+
+    //Responsibility: Calculations
+    public int surfaceArea()
+    {
+        return (2*(22/7)*getRadius()*getHeight())+(2*(22/7)*(getRadius()*getRadius()));
+    }
+    public int volume()
+    {
+        return ((22/7)*(getRadius()*getRadius())*getHeight());
+    }
+
+}
